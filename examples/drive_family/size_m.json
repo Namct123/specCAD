@@ -1,0 +1,353 @@
+{
+  "parts_specs": [
+    {
+      "name": "main_shaft",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "stepped_shaft",
+        "sections": [
+          {
+            "d": 20,
+            "h": 50
+          },
+          {
+            "d": 28,
+            "h": 40
+          },
+          {
+            "d": 20,
+            "h": 50
+          }
+        ]
+      }
+    },
+    {
+      "name": "housing_cylinder",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "tube",
+        "od": 90,
+        "id": 62,
+        "h": 80
+      }
+    },
+    {
+      "name": "bearing_seat",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "tube",
+        "od": 62,
+        "id": 22,
+        "h": 20
+      }
+    },
+    {
+      "name": "end_flange",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "tube",
+        "od": 130,
+        "id": 24,
+        "h": 15
+      },
+      "features": [
+        {
+          "op": "hole_pcd",
+          "d": 8.4,
+          "pcd": 110,
+          "count": 8,
+          "start_angle": 0,
+          "sel": ">Z"
+        }
+      ]
+    },
+    {
+      "name": "washer",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "tube",
+        "od": 16,
+        "id": 8.4,
+        "h": 2
+      }
+    },
+    {
+      "name": "bolt",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "stepped_shaft",
+        "sections": [
+          {
+            "d": 14,
+            "h": 8
+          },
+          {
+            "d": 8,
+            "h": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "base_foot",
+      "tier": "compiler_cpu",
+      "base": {
+        "shape": "bracket_with_cutout",
+        "dims": [
+          120,
+          20,
+          20
+        ],
+        "cuts": [
+          {
+            "shape": "cylinder",
+            "r": 5,
+            "h": 22,
+            "xyz": [
+              -45,
+              -11,
+              10
+            ],
+            "axis": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "shape": "cylinder",
+            "r": 5,
+            "h": 22,
+            "xyz": [
+              45,
+              -11,
+              10
+            ],
+            "axis": [
+              0,
+              1,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "assembly_plan": {
+    "export_name": "size_m_assembly",
+    "placements": {
+      "main_shaft_001": {
+        "part": "main_shaft",
+        "translation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "housing_cylinder_002": {
+        "part": "housing_cylinder",
+        "translation": [
+          0,
+          0,
+          30
+        ]
+      },
+      "bearing_seat_003": {
+        "part": "bearing_seat",
+        "translation": [
+          0,
+          0,
+          30
+        ]
+      },
+      "bearing_seat_004": {
+        "part": "bearing_seat",
+        "translation": [
+          0,
+          0,
+          90
+        ]
+      },
+      "end_flange_005": {
+        "part": "end_flange",
+        "translation": [
+          0,
+          0,
+          15
+        ]
+      },
+      "end_flange_006": {
+        "part": "end_flange",
+        "translation": [
+          0,
+          0,
+          110
+        ]
+      },
+      "base_foot_007": {
+        "part": "base_foot",
+        "translation": [
+          0,
+          -55,
+          35
+        ]
+      },
+      "base_foot_008": {
+        "part": "base_foot",
+        "translation": [
+          0,
+          -55,
+          85
+        ]
+      },
+      "bolt_009": {
+        "part": "bolt",
+        "translation": [
+          55,
+          0,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_010": {
+        "part": "bolt",
+        "translation": [
+          38.890872965260115,
+          38.890872965260115,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_011": {
+        "part": "bolt",
+        "translation": [
+          0,
+          55,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_012": {
+        "part": "bolt",
+        "translation": [
+          -38.890872965260115,
+          38.890872965260115,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_013": {
+        "part": "bolt",
+        "translation": [
+          -55,
+          0,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_014": {
+        "part": "bolt",
+        "translation": [
+          -38.890872965260115,
+          -38.890872965260115,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_015": {
+        "part": "bolt",
+        "translation": [
+          0,
+          -55,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      },
+      "bolt_016": {
+        "part": "bolt",
+        "translation": [
+          38.890872965260115,
+          -38.890872965260115,
+          135
+        ],
+        "rotation_axis": [
+          1,
+          0,
+          0
+        ],
+        "rotation_deg": 180
+      }
+    },
+    "circular_patterns": {
+      "rear_washer": {
+        "part": "washer",
+        "count": 8,
+        "pcd": 110,
+        "center": [
+          0,
+          0,
+          13
+        ],
+        "start_angle": 0
+      },
+      "front_washer": {
+        "part": "washer",
+        "count": 8,
+        "pcd": 110,
+        "center": [
+          0,
+          0,
+          125
+        ],
+        "start_angle": 0
+      },
+      "rear_bolt": {
+        "part": "bolt",
+        "count": 8,
+        "pcd": 110,
+        "center": [
+          0,
+          0,
+          5
+        ],
+        "start_angle": 0
+      }
+    },
+    "expected_volume": 928094.545
+  }
+}

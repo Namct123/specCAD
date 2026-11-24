@@ -1,0 +1,137 @@
+{
+  "matched_sizes": [
+    "M",
+    "L",
+    "S"
+  ],
+  "totals": {
+    "A": {
+      "sessions": 3,
+      "api_calls": 3,
+      "uncached_tokens": 41166,
+      "cached_tokens": 45696,
+      "all_tokens": 86862,
+      "accepted": 3,
+      "mcp_calls": 0,
+      "local_sec": 22.957
+    },
+    "B": {
+      "sessions": 1,
+      "api_calls": 1,
+      "uncached_tokens": 14175,
+      "cached_tokens": 15232,
+      "all_tokens": 29407,
+      "accepted": 3,
+      "mcp_calls": 7,
+      "local_sec": 65.109
+    }
+  },
+  "saving_pct": {
+    "uncached_tokens": 65.57,
+    "all_tokens": 66.15
+  },
+  "rows": [
+    {
+      "arm": "A",
+      "size": "M",
+      "sessions": 1,
+      "api_calls": 1,
+      "uncached_tokens": 13472,
+      "cached_tokens": 15232,
+      "all_tokens": 28704,
+      "local_cad_sec": 5.439,
+      "independent_check_sec": 1.566,
+      "solids": 40,
+      "volume_mm3": 928094.545273,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 780,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A",
+      "size": "L",
+      "sessions": 1,
+      "api_calls": 1,
+      "uncached_tokens": 13846,
+      "cached_tokens": 15232,
+      "all_tokens": 29078,
+      "local_cad_sec": 6.156,
+      "independent_check_sec": 2.89,
+      "solids": 56,
+      "volume_mm3": 1233268.598594,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 1540,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A",
+      "size": "S",
+      "sessions": 1,
+      "api_calls": 1,
+      "uncached_tokens": 13848,
+      "cached_tokens": 15232,
+      "all_tokens": 29080,
+      "local_cad_sec": 5.748,
+      "independent_check_sec": 1.158,
+      "solids": 32,
+      "volume_mm3": 499520.815267,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 496,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "B",
+      "size": "M",
+      "sessions": 1,
+      "api_calls": 1,
+      "uncached_tokens": 14175,
+      "cached_tokens": 15232,
+      "all_tokens": 29407,
+      "local_cad_sec": 28.973,
+      "independent_check_sec": 1.588,
+      "solids": 40,
+      "volume_mm3": 928094.545273,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 780,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "B",
+      "size": "L",
+      "sessions": 0,
+      "api_calls": 0,
+      "uncached_tokens": 0,
+      "cached_tokens": 0,
+      "all_tokens": 0,
+      "local_cad_sec": 15.197,
+      "independent_check_sec": 3.097,
+      "solids": 56,
+      "volume_mm3": 1233268.598594,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 1540,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "B",
+      "size": "S",
+      "sessions": 0,
+      "api_calls": 0,
+      "uncached_tokens": 0,
+      "cached_tokens": 0,
+      "all_tokens": 0,
+      "local_cad_sec": 15.124,
+      "independent_check_sec": 1.13,
+      "solids": 32,
+      "volume_mm3": 499520.815267,
+      "radial_clearance_mm": 1.0,
+      "brep_pairs": 496,
+      "intersection_volume_mm3": 0.0,
+      "passed": true
+    }
+  ]
+}
