@@ -34,7 +34,25 @@ Configure your MCP client to launch the virtual environment's Python with `-m mc
 
 ## Benchmark
 
-The [drive family benchmark](benchmarks/drive_family_ab/report.md) qualified both CAD routes on three variants, with **40, 56, and 32 watertight solids**. In that experiment, the hybrid route used one Codex session instead of three and consumed **65.57% fewer uncached input plus output tokens**. The two derivative manifests were executed locally. Those figures describe this benchmark and include its recorded cache conditions.
+These A/B runs compare **pure Text-to-CAD with Codex Sol 6.2 (`gpt-6.2-sol`)** against **specCAD's manifest-based hybrid workflow**. The direct route starts with generated CadQuery code and uses a Codex call for each revision or size variant. The hybrid route uses Codex for the initial plan and applies subsequent changes locally. Both routes had to pass geometry and interference checks.
+
+![Cloud tokens for direct Text-to-CAD and specCAD. The hybrid uses 5.22% more for the initial drive build, 53.63% fewer for five gimbal rounds, and 65.57% fewer for the full drive family.](benchmarks/charts/cloud-tokens.png)
+
+| Workload | Pure Text-to-CAD tokens | specCAD tokens | Hybrid change | Cloud calls (direct → hybrid) |
+| --- | ---: | ---: | ---: | ---: |
+| Drive size M only (40 solids) | 13,472 | 14,175 | 5.22% more | 1 → 1 |
+| Gimbal initial build + four revisions (35 solids) | 31,606 | 14,656 | 53.63% fewer | 5 → 1 |
+| Drive family M/L/S (40, 56, 32 solids) | 41,166 | 14,175 | 65.57% fewer | 3 → 1 |
+
+The token metric adds uncached input and output, including any reported reasoning in output. The drive family total includes size M. Both routes qualified all five gimbal rounds and all three drive sizes.
+
+**Strength.** Once the design was in a manifest, the four gimbal revisions used **0 additional cloud tokens** versus **17,440** for the direct route. The two derivative drive sizes also used **0 additional cloud tokens**. A placement correction identified by collision checks on the first hybrid gimbal build was applied locally before qualification.
+
+![The hybrid drive family took 65.11 seconds of local runtime versus 22.96 seconds for the direct route. Size M took 30.56 versus 7.00 seconds.](benchmarks/charts/drive-local-time.png)
+
+**Weakness.** The first drive build used more cloud tokens and took longer locally. Across all three sizes, the hybrid route took **65.11 s** locally versus **22.96 s** for the direct route. That timing covers build, export and independent verification, including MCP startup and one local assembly retry on the hybrid side. Cloud generation time is outside this measurement.
+
+The workloads favor changes that fit the manifest. Changes requiring new freeform geometry may need more cloud calls. These runs measure manifest edits and provide no measurement of Ollama-generated revisions. [Drive family methodology and recorded results](benchmarks/drive_family_ab/report.md)
 
 ## Tests
 
