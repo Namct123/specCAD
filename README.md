@@ -1,8 +1,8 @@
-# CadRelay
+# specCAD
 
 **Local-first CAD automation for repeatable mechanical assemblies.**
 
-CadRelay turns YAML or JSON manifests into CadQuery solids, checks volume and interference with OpenCASCADE, and exports STEP and GLB. Define a part family once, then place its instances in a line, on a bolt circle, or with individual transforms.
+specCAD turns YAML or JSON manifests into CadQuery solids, checks volume and interference with OpenCASCADE, and exports STEP and GLB. Define a part family once, then place its instances in a line, on a bolt circle, or with individual transforms.
 
 - **Deterministic compiler** for shafts, flanges, sleeves, brackets, hollow frustums, and swept tubes.
 - **MCP server** for batch compilation, assembly, and file inspection.

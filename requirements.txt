@@ -1,4 +1,4 @@
-# CadRelay dependencies
+# specCAD dependencies
 # Python >= 3.10, < 3.13 recommended for CadQuery & OpenCascade wheels
 
 # Core CAD Engine
